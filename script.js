@@ -18,7 +18,6 @@ if (toggle && menu) {
     menu.classList.toggle('hidden');
   });
 
-  // Close mobile menu when a link is clicked
   document.querySelectorAll('#mobileMenu a').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.add('hidden');
@@ -26,7 +25,7 @@ if (toggle && menu) {
   });
 }
 
-// ===== SMOOTH SCROLL (optional enhancement) =====
+// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const targetId = this.getAttribute('href');
@@ -46,14 +45,8 @@ const toast = document.getElementById('toast');
 if (contactForm && toast) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Display the success notification toast
     toast.classList.add('show');
-    
-    // Reset the form values
     contactForm.reset();
-    
-    // Hide toast after 3 seconds
     setTimeout(() => {
       toast.classList.remove('show');
     }, 3000);
