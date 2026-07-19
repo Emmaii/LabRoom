@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Tech | Enterprise Software Engineering & FinTech Solutions</title>
+    <title>Neon Tech | Corporate Software Engineering</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -16,39 +14,43 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">
+            <div class="logo">
                 <div class="logo-icon">
-                    <i data-lucide="cpu"></i>
+                    <i class="fas fa-code"></i>
                 </div>
                 <div>
-                    <span class="logo-name">NEON TECH</span>
-                    <span class="logo-tag">ENTERPRISE SYSTEMS</span>
+                    <span class="logo-name">Neon Tech</span>
+                    <span class="logo-tag">Corporate Engineering</span>
                 </div>
-            </a>
+            </div>
             
             <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#capabilities" class="nav-link">Capabilities</a>
-                <a href="#team" class="nav-link">Leadership</a>
-                <a href="#contact" class="btn-portal">Work With Us</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#infrastructure" class="nav-link">Infrastructure</a>
+                <a href="#contact" class="btn-portal">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
             </div>
 
-            <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
-                <i data-lucide="menu"></i>
+            <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
             </button>
-        </div>
-        
-        <!-- Mobile Dropdown Menu -->
-        <div class="mobile-menu hidden" id="mobileMenu">
-            <a href="#services" class="mobile-link">Services</a>
-            <a href="#capabilities" class="mobile-link">Capabilities</a>
-            <a href="#team" class="mobile-link">Leadership</a>
-            <a href="#contact" class="mobile-portal-btn">Work With Us</a>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="mobileMenu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#infrastructure" class="mobile-link">Infrastructure</a>
+        <a href="#contact" class="mobile-portal-btn">Contact Us</a>
+    </div>
+
     <!-- Hero Section -->
-    <header id="home" class="hero">
+    <section id="home" class="hero">
         <div class="hero-bg-glow hero-glow-right"></div>
         <div class="hero-bg-glow hero-glow-left"></div>
         <div class="hero-container">
@@ -56,191 +58,235 @@
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="hero-badge-dot"></span>
-                        <span class="hero-badge-text">NOW BOOKING Q3/Q4 DEPLOYMENTS</span>
+                        <span class="hero-badge-text">ENTERPRISE SYSTEMS</span>
                     </div>
-                    <h1 class="hero-title">Engineering <span class="hero-title-gradient">Airtight Digital Platforms</span> For Scalable Enterprise Growth.</h1>
-                    <p class="hero-subtitle">Neon Tech architectures high-performance custom financial applications, secure double-entry accounting ledgers, and optimized cross-platform systems tailored for modern corporations.</p>
+                    <h1 class="hero-title">
+                        Building High-Performance <span class="hero-title-gradient">Corporate Solutions</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Neon Tech designs, engineers, and deploys robust web applications and scalable software architectures tailored to optimize business operations.
+                    </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="hero-btn btn-primary">Initiate Consultation</a>
-                        <a href="#services" class="hero-btn btn-secondary">Explore Solutions</a>
+                        <a href="#contact" class="hero-btn btn-primary">Get in Touch</a>
+                        <a href="#projects" class="hero-btn btn-secondary">Our Projects</a>
                     </div>
                     <div class="hero-trust">
                         <div class="trust-item">
-                            <i class="fas fa-shield-alt trust-icon-cyan"></i>
-                            <span class="trust-text">Bank-Grade Security Architecture</span>
+                            <i class="fas fa-check-circle trust-icon-emerald"></i>
+                            <span class="trust-text">Clean Code Specifications</span>
                         </div>
                         <div class="trust-item">
-                            <i class="fas fa-bolt trust-icon-emerald"></i>
-                            <span class="trust-text">Turnkey Production Delivery</span>
+                            <i class="fas fa-shield-alt trust-icon-cyan"></i>
+                            <span class="trust-text">Secure Infrastructures</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-visual">
                     <div class="hero-card">
                         <div class="hero-card-icon">
-                            <i data-lucide="layers"></i>
+                            <i class="fas fa-terminal"></i>
                         </div>
                         <div class="hero-card-stats">
-                            <div class="hero-card-stat-number">99.9%</div>
-                            <div class="hero-card-stat-label">Core Engine Infrastructure Uptime</div>
+                            <div class="hero-card-stat-number">100%</div>
+                            <div class="hero-card-stat-label">Production Delivery Rate</div>
                         </div>
                         <div class="hero-card-grid">
                             <div class="hero-card-item">
-                                <div class="hero-card-item-number">Secure</div>
-                                <div class="hero-card-item-label">PCI-DSS Tokenization</div>
+                                <div class="hero-card-item-number">Active</div>
+                                <div class="hero-card-item-label">Deployments</div>
                             </div>
                             <div class="hero-card-item">
-                                <div class="hero-card-item-number">Fast</div>
-                                <div class="hero-card-item-label">PWA Architecture</div>
+                                <div class="hero-card-item-number">Robust</div>
+                                <div class="hero-card-item-label">Architecture</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Core Services -->
+    <!-- Value Proposition / Services -->
     <section id="services" class="section-value">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Corporate Core Offerings</span>
-                <h2 class="section-title">Engineered For Operational Precision</h2>
-                <p class="section-subtitle">We design corporate ecosystems that completely separate technical execution bottlenecks from your core everyday business operations.</p>
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Engineered for Efficiency</h2>
+                <p class="section-subtitle">We develop reliable digital systems engineered with strict logic and modern tech stacks.</p>
             </div>
-            
+
             <div class="value-grid">
                 <div class="value-card">
                     <div class="value-icon value-icon-cyan">
-                        <i data-lucide="wallet"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3 class="value-title">FinTech Engineering</h3>
-                    <p class="value-text">Custom deployment of multi-track loan frameworks, conditional guarantor engines, and dynamic double-entry ledgers that keep institutional balances airtight.</p>
+                    <h3 class="value-title">Web Engineering</h3>
+                    <p class="value-text">Custom corporate platforms built using clean HTML, CSS, and robust backend integrations.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon value-icon-emerald">
-                        <i data-lucide="smartphone"></i>
+                        <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="value-title">Mobile-First PWAs</h3>
-                    <p class="value-text">High-performance Progressive Web Apps built to deploy seamlessly on Android and iOS devices without the friction or delay of app store review cycles.</p>
+                    <h3 class="value-title">System Architecture</h3>
+                    <p class="value-text">Designing secure configurations that scale flawlessly alongside your corporate growth objectives.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon value-icon-blue">
-                        <i data-lucide="shield-check"></i>
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    <h3 class="value-title">Identity & Gateway Integrations</h3>
-                    <p class="value-text">Secure onboarding infrastructure featuring automated government API verifications (BVN/NIN) paired with compliant webhook event processing.</p>
+                    <h3 class="value-title">Technical Strategy</h3>
+                    <p class="value-text">Providing complete systems management and deployment pipelines under precise engineering leadership.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Operational Capabilities -->
-    <section id="capabilities" class="section-infrastructure">
+    <!-- Stats Banner -->
+    <div class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">02</div>
+                    <div class="stat-label">Core Projects</div>
+                </div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Clean Code Base</div>
+                </div>
+                <div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">System Integrity</div>
+                </div>
+                <div>
+                    <div class="stat-number">01</div>
+                    <div class="stat-label">Dedicated Dev Lead</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Presentation Section (Using original Pricing layout) -->
+    <section id="projects" class="section-pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag section-tag-cyan">Architecture Standards</span>
-                <h2 class="section-title-light">System Integrity By Default</h2>
-                <p class="section-subtitle-light">Every software platform delivered by Neon Tech is constructed to professional defense-in-depth specifications.</p>
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Enterprise System Deployments</h2>
+                <p class="section-subtitle">Explore the corporate platforms built and managed by our engineering division.</p>
             </div>
-            
+
+            <div class="network-group">
+                <div class="network-header">
+                    <span class="network-tag tag-mtn">Active</span>
+                    <span class="network-label">Production Environments</span>
+                </div>
+
+                <div class="plan-grid">
+                    <!-- Project 1 -->
+                    <div class="plan-card plan-card-highlight">
+                        <div class="plan-badge">System One</div>
+                        <div class="plan-size">Project Alpha</div>
+                        <div class="plan-type">Enterprise Application</div>
+                        <div class="plan-price">Operational</div>
+                        <div class="plan-validity">Custom Web Platform</div>
+                        <a href="https://wa.me/2347031763615" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Inquire About Framework
+                        </a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="plan-card">
+                        <div class="plan-badge">System Two</div>
+                        <div class="plan-size">Project Beta</div>
+                        <div class="plan-type">Data Dashboard</div>
+                        <div class="plan-price">Operational</div>
+                        <div class="plan-validity">Internal Infrastructure</div>
+                        <a href="https://wa.me/2347031763615" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Inquire About Framework
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Infrastructure Section -->
+    <section id="infrastructure" class="section-infrastructure">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag section-tag-cyan">Standards</span>
+                <h2 class="section-title-light">Reliable Infrastructure Architecture</h2>
+                <p class="section-subtitle-light">Our builds conform to strict performance diagnostics and asset deployment metrics.</p>
+            </div>
+
             <div class="infra-grid">
                 <div class="infra-card">
-                    <div class="infra-icon"><i data-lucide="fingerprint"></i></div>
-                    <h3 class="infra-title">Row-Level Security</h3>
-                    <p class="infra-text">Total data isolation layers keeping profile rows securely partitioned across client ledgers.</p>
+                    <div class="infra-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 class="infra-title">High Optimization</h3>
+                    <p class="infra-text">Lightweight code execution for ultra-fast performance interfaces.</p>
                 </div>
                 <div class="infra-card">
-                    <div class="infra-icon"><i data-lucide="database"></i></div>
-                    <h3 class="infra-title">Immutable Auditing</h3>
-                    <p class="infra-text">Permanent, append-only administrative log trails tracking internal transactional records.</p>
+                    <div class="infra-icon"><i class="fas fa-lock"></i></div>
+                    <h3 class="infra-title">Secure Frameworks</h3>
+                    <p class="infra-text">Sanitized integrations preventing vulnerabilities across deployment spaces.</p>
                 </div>
                 <div class="infra-card">
-                    <div class="infra-icon"><i data-lucide="key-round"></i></div>
-                    <h3 class="infra-title">Safe Tokenization</h3>
-                    <p class="infra-text">Sensitive credentials offloaded directly to standardized vault environments using abstract identifiers.</p>
+                    <div class="infra-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3 class="infra-title">Version Control</h3>
+                    <p class="infra-text">Managed Git environments ensuring predictable corporate update rollouts.</p>
                 </div>
                 <div class="infra-card">
-                    <div class="infra-icon"><i data-lucide="activity"></i></div>
-                    <h3 class="infra-title">Dynamic Calculation</h3>
-                    <p class="infra-text">Balances derived dynamically from raw structural logs rather than static arbitrary data states.</p>
+                    <div class="infra-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="infra-title">Continuous Dev</h3>
+                    <p class="infra-text">Monitored pipeline structures overseen directly by our internal Team Lead.</p>
                 </div>
+            </div>
+
+            <div class="infra-note">
+                <i class="fas fa-shield-alt infra-note-icon"></i>
+                <p>All projects undergo rigorous internal structural scoping before production launch.</p>
             </div>
         </div>
     </section>
 
-    <!-- Corporate Leadership / Team Section -->
-    <section id="team" class="section-value bg-light-gray">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Leadership Profile</span>
-                <h2 class="section-title">The Engineering Mindset Behind The Code</h2>
-                <p class="section-subtitle">Neon Tech projects are led and directed by proven industry architects focused on clean system logic.</p>
-            </div>
-            
-            <div class="team-wrapper">
-                <div class="team-card">
-                    <div class="team-img-container">
-                        <img src="assets/profpic.jpg" alt="Emmanuel Silas Kelechi" class="team-image">
-                    </div>
-                    <div class="team-info">
-                        <h3 class="team-name">Emmanuel Silas Kelechi</h3>
-                        <p class="team-role">Development Team Lead & Lead Systems Architect</p>
-                        <p class="team-bio">Emmanuel guides the core technological vision, architecture pipelines, and security designs for Neon Tech's enterprise engagements. Specializing in advanced functional ledger development, API wrapper routing, and microservices design, he ensures that custom builds are scalable, safe, and delivered precisely within contractual execution windows.</p>
-                        <div class="team-badges">
-                            <span class="badge-item">Systems Architecture</span>
-                            <span class="badge-item">FinTech Infrastructure</span>
-                            <span class="badge-item">Database Optimization</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Corporate Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="section-contact">
         <div class="container">
-            <div class="contact-layout">
-                <div class="contact-info-block">
-                    <span class="section-tag">Enterprise Inquiries</span>
-                    <h2 class="contact-left-title">Let’s Scope Your Next System Migration.</h2>
-                    <p class="contact-left-text">Whether you are transitioning manual corporate records into automated digital ledgers or seeking high-performance internal web apps, our team will design an optimized infrastructure strategy.</p>
-                    <div class="direct-contact-methods">
-                        <div class="method-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Corporate Desk</h4>
-                                <p>emmaabusinesss@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="contact-container">
+                <div class="contact-badge">
+                    <span class="contact-badge-dot"></span>
+                    <span class="contact-badge-text">Corporate Operations</span>
                 </div>
+                <h2 class="contact-title">Partner With Neon Tech</h2>
+                <p class="contact-subtitle">
+                    Submit your development requirements here. Our development team, directed by Team Lead Emmanuel, will analyze your technical scope.
+                </p>
                 
-                <div class="contact-form-container">
-                    <form id="contactForm" class="corp-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name / Corporate Officer</label>
-                                <input type="text" id="name" required placeholder="e.g., John Doe">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Corporate Email Address</label>
-                                <input type="email" id="email" required placeholder="name@company.com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Scope Summary</label>
-                            <textarea id="message" rows="5" required placeholder="Outline key functionality requirements, projected deadlines, or existing architectural constraints..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit-corp">
-                            <span>Submit Request For Proposal</span> <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </form>
+                <div class="contact-buttons">
+                    <a href="mailto:emmaabusinesss@gmail.com" class="btn-outline-dark">
+                        <i class="fas fa-envelope"></i> Email Engineering Desk
+                    </a>
+                    <p class="contact-note">Neon Tech Solutions | Led by Development Team Lead Emmanuel</p>
                 </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Corporate Name / Representative</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Requirements / Scope</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Corporate Inquiry
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -248,23 +294,35 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <div class="footer-logo-icon">
-                        <i data-lucide="cpu"></i>
-                    </div>
-                    <span class="footer-logo-name">NEON TECH</span>
+            <div class="footer-content">
+                <p class="footer-text">Building intelligent systems with clean code and data | Neon Tech Engineering</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Emmaii" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:emmaabusinesss@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-                <p class="footer-compliance">Architecting highly secure, functional custom software configurations for commercial entities.</p>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; <span id="year"></span> Neon Tech Engineering. All rights reserved.</p>
+                <div class="footer-top" style="border:none; padding:0; margin:0;">
+                    <p class="footer-compliance" style="color:#64748b; font-size:12px; margin-top:10px;">
+                        Development Operations managed by Development Team Lead Emmanuel.
+                    </p>
+                </div>
+                <p class="footer-copyright">
+                    &copy; <span id="year"></span> Neon Tech. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Success Message Toast -->
-    <div class="toast" id="toast">Project inquiry routed successfully. Our engineering desk will contact you.</div>
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Success Message -->
+    <div class="toast" id="toast">Corporate inquiry routed successfully!</div>
 
     <script src="script.js"></script>
 </body>
