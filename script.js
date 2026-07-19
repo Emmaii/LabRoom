@@ -1,86 +1,61 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide Icons Vector Engine
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
+// ===== LUCIDE ICONS =====
+if (typeof lucide !== 'undefined') {
+  lucide.createIcons();
+}
 
-  // Set Dynamic Copyright Framework Year
-  const yearElement = document.getElementById('year');
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
+// ===== SET CURRENT YEAR =====
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-  // Mobile Navigation Interaction Model
-  const menuToggle = document.getElementById('mobileMenuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
+// ===== MOBILE MENU TOGGLE =====
+const toggle = document.getElementById('mobileMenuToggle');
+const menu = document.getElementById('mobileMenu');
 
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Dismiss overlay structure upon valid link routing selection
-    document.querySelectorAll('#mobileMenu aria-label, #mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Close mobile menu if user clicks outside of it
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-  }
-
-  // Smooth Scroll View Navigation Realignment
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        e.preventDefault();
-        
-        // Offset scroll calculation to account for fixed header layout height
-        const headerOffset = 90;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
+if (toggle && menu) {
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
   });
 
-  // Corporate Proposal Intake Form Validation Engine
-  const contactForm = document.getElementById('contactForm');
-  const toastNotification = document.getElementById('toast');
-
-  if (contactForm && toastNotification) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Collect data points for structured transmission mapping
-      const submissionPayload = {
-        officerName: document.getElementById('name').value.trim(),
-        corporateEmail: document.getElementById('email').value.trim(),
-        projectScope: document.getElementById('message').value.trim()
-      };
-
-      // Execution verification notification loop
-      toastNotification.classList.add('show');
-      contactForm.reset();
-
-      // Dismiss tracking toast window cleanly
-      setTimeout(() => {
-        toastNotification.classList.remove('show');
-      }, 4000);
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
     });
-  }
+  });
+}
+
+// ===== SMOOTH SCROLL (optional enhancement) =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
+
+// ===== CONTACT FORM TOAST SUBMISSION =====
+const contactForm = document.getElementById('contactForm');
+const toast = document.getElementById('toast');
+
+if (contactForm && toast) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Display the success notification toast
+    toast.classList.add('show');
+    
+    // Reset the form values
+    contactForm.reset();
+    
+    // Hide toast after 3 seconds
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000);
+  });
+}
